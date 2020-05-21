@@ -19,7 +19,7 @@ const user = {
         required: true
     },
     email: {
-        type: Number,
+        type: String,
         required: true
     },
 };

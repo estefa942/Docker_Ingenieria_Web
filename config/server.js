@@ -31,17 +31,17 @@ const swaggerUi = require('swagger-ui-express')
 
 const swaggerOptions = {
   swaggerDefinition: {
-    info:{
-      title:"Users API",
-      description:"User API for mobile app",
-      contact:{
-        name:"estefany"
-      },
-      servers:["http://localhost:8081"]
-    }
+  info: {
+  title: "Users API Ingeniería Web",
+  description: "Users API para aplicación móvil",
+  contact: {
+  name: "Estefany Muriel"
   },
-  apis:["index.js"]
-}
+  servers: ["http://localhost:3000"]
+  }
+  },
+  apis: ["../app.js", "./app/components/user/route.js"]
+ };
 /**
  * Sets up the server configuration to an Express app
  * @param {*} app 

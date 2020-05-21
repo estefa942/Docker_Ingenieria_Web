@@ -6,7 +6,7 @@ const getUsers = async () => {
 }
 
 const getUserById = async (userId) => {
-  const user = await userModel.findById({userId}).exec();
+  const user = await userModel.findById(userId).exec();
   return user;
 };
 

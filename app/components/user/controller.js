@@ -4,24 +4,16 @@ const user = require('./user');
 const getUsers = async (req, res) => {
   try {
     const users = await user.getUsers();
-
-    if (users.length === 0) {
-      return res
-        .status(httpStatus.NOT_FOUND)
-        .send({ message: 'Not found' });
-    }else if (users.length > 0){
-      return res
+    return res
       .status(httpStatus.OK)
       .send(users);
-    }
-   
   } catch (error) {
     console.error(error);
-    return res
-      .status(httpStatus.INTERNAL_SERVER_ERROR)
-      .send({ message: 'Interal server error' });
+  return res
+     .status(httpStatus.INTERNAL_SERVER_ERROR)
+     .send({ message: 'Interal server error' });
   }
-};
+ };
 
 const getUserById = async (req, res) => {
   const {id} = req.params;
